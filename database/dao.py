@@ -7,7 +7,6 @@ class DAO:
     """
     Implementare tutte le funzioni necessarie a interrogare il database.
     """
-    # TODO
 
     @staticmethod
     def readHub():
