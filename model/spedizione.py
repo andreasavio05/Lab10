@@ -2,17 +2,11 @@ import datetime
 from dataclasses import dataclass
 
 
-@dataclass
 class Spedizione:
-    id: int
-    id_compagnia: int
-    numero_tracking: str
-    id_hub_origine: int
-    id_hub_destinazione: int
-    data_ritiro_programmata: datetime.datetime
-    distanza: int
-    data_consegna: datetime.datetime
-    valore_merce: float
+    def __init__(self, hub1, hub2, peso):
+        self.hub1 = hub1
+        self.hub2 = hub2
+        self.peso = peso
 
     def __eq__(self, other):
         return isinstance(other, Spedizione) and self.id == other.id
